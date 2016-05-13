@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SafeMap - Child Safety Locator</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="eMailLink">Contact Us</string>
+    <string name="fullWebsite">Full Website</string>
+    <string name="eMailAddress">communications@cscpbc.org</string>
+    <string name="emailSubject">SiteMap App</string>
+    <string name="fullWebsiteURL">http://safety.cscpbc.org/safemap</string>
+    <string name="swimLessonsLabel">Swim Lessons</string>
+    <string name="swimLessonsTitle">Swim Lessons Offered Here:</string>
+    <string name="carSeatLabel">Car Seat Install</string>
+    <string name="carSeatTitle">Car Seat Installs Offered Here:</string>
+    <string name="helmetFittingLabel">Helmet Fitting</string>
+    <string name="helmetFittingTitle">Bike Helmet Fittings Here:</string>
+    <string name="pillDropOffLabel">Pill Drop Off</string>
+    <string name="pillDropOffTitle">Pill Drop Off Location Here:</string>
+    <string name="no_map_activity">"No map application is available to show this address"</string>
+</resources>

@@ -1,0 +1,36 @@
+{
+  "locations":[
+    {
+      "name":"CSC Palm Beach",
+      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
+      "latitude":"26.551748",
+      "longitude":"-80.071720",
+      "description":"CSC Palm Beach",
+      "location_type":"1"
+    },
+    {
+      "name":"CSC Palm Beach",
+      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
+      "latitude":"26.551748",
+      "longitude":"-80.071720",
+      "description":"CSC Palm Beach",
+      "location_type":"1"
+    },
+    {
+      "name":"CSC Palm Beach",
+      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
+      "latitude":"26.551748",
+      "longitude":"-80.071720",
+      "description":"CSC Palm Beach",
+      "location_type":"1"
+    },
+    {
+      "name":"CSC Palm Beach",
+      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
+      "latitude":"26.551748",
+      "longitude":"-80.071720",
+      "description":"CSC Palm Beach",
+      "location_type":"1"
+    }
+ ]
+}

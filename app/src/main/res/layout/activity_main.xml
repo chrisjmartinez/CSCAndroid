@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="safemap.cscpbc.org.safemap.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+            <Button
+                android:id="@+id/buttonSwim"
+                android:background="@mipmap/ic_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/swimLessonsLabel"
+                android:textColor="@color/colorImageText"
+                android:gravity="left"
+                android:onClick="swimButtonClick" />
+            <Button
+                android:id="@+id/buttonCarSeat"
+                android:background="@mipmap/ic_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/carSeatLabel"
+                android:textColor="@color/colorImageText"
+                android:gravity="left"
+                android:onClick="carSeatButtonClick" />
+            <Button
+                android:id="@+id/buttonHelmet"
+                android:background="@mipmap/ic_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/helmetFittingLabel"
+                android:textColor="@color/colorImageText"
+                android:gravity="left"
+                android:onClick="helmetButtonClick" />
+            <Button
+                android:id="@+id/buttonPillDrop"
+                android:background="@mipmap/ic_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/pillDropOffLabel"
+                android:textColor="@color/colorImageText"
+                android:gravity="left"
+                android:onClick="pillDropButtonClick" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="3">
+                <TextView
+                    android:id="@+id/emailLink"
+                    android:text="@string/eMailLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="emailClick" />
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/fullSiteLink"
+                    android:text="@string/fullWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:onClick="websiteClick" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
