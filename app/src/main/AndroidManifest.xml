@@ -49,12 +49,15 @@
 
         <activity
             android:name=".MapsActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_maps">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="safemap.cscpbc.org.safemap.MainActivity" />
         </activity>
-        <activity android:name=".MapDetailActivity">
+        <activity
+            android:name=".MapDetailActivity"
+            android:launchMode="singleTask">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="safemap.cscpbc.org.safemap.MapsActivity" />

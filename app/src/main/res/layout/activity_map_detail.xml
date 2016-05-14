@@ -27,9 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:onClick="addressClick"
+        android:autoLink="map"
         android:gravity="center_horizontal"/>
+    <!-- These properties are mutually exclusive above -->
     <!-- android:autoLink="map" -->
+    <!-- android:onClick="addressClick" -->
 
     <TextView
         android:id="@+id/detailExtras"
