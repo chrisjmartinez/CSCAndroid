@@ -73,7 +73,7 @@ public class SafetyLocation {
 
                 if (json.has("location_type")) {
                     int type = json.getInt("location_type");
-                    location.type = SafetyLocation.LocationType.values()[type];
+                    location.type = SafetyLocation.LocationType.values()[type - 1];
                 }
 
             } catch (JSONException ex) {
@@ -124,7 +124,7 @@ public class SafetyLocation {
     }
 
     private static ArrayList<SafetyLocation> readLocations(XmlPullParser parser) throws XmlPullParserException, IOException {
-        ArrayList<SafetyLocation> entries = new ArrayList<SafetyLocation>();
+        ArrayList<SafetyLocation> locations = new ArrayList<SafetyLocation>();
 
         parser.require(XmlPullParser.START_TAG, ns, "locations");
         while (parser.next() != XmlPullParser.END_TAG) {
@@ -134,12 +134,12 @@ public class SafetyLocation {
             String name = parser.getName();
             // Starts by looking for the location tag
             if (name.equals("location")) {
-                entries.add(readLocation(parser));
+                locations.add(readLocation(parser));
             } else {
                 skip(parser);
             }
         }
-        return entries;
+        return locations;
     }
 
     // Parses the contents of an entry. If it encounters a name, address, or description tag, hands them off
@@ -175,7 +175,7 @@ public class SafetyLocation {
             } else if (node.equals("description")) {
                 description = readDescription(parser);
                 safetyLocation.description = description;
-            } else if (node.equals("location_type")) {
+            } else if (node.equals("locationType")) {
                 locationType = readLocationType(parser);
                 safetyLocation.type = locationType;
             } else {
@@ -221,10 +221,10 @@ public class SafetyLocation {
     }
 
     private static LocationType readLocationType(XmlPullParser parser) throws IOException, XmlPullParserException {
-        parser.require(XmlPullParser.START_TAG, ns, "description");
+        parser.require(XmlPullParser.START_TAG, ns, "locationType");
         int locType = readInteger(parser);
-        parser.require(XmlPullParser.END_TAG, ns, "description");
-        return LocationType.values()[locType];
+        parser.require(XmlPullParser.END_TAG, ns, "locationType");
+        return LocationType.values()[locType - 1];
     }
 
     private static String readText(XmlPullParser parser) throws IOException, XmlPullParserException {

@@ -42,7 +42,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
     private GoogleMap mMap;
     private SafetyLocation.LocationType locationType = SafetyLocation.LocationType.swimLocation;
     private ArrayList<SafetyLocation> locations;
-    private boolean locationsFromJSON = false;
+    private boolean locationsFromJSON = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +58,30 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
             locationType = SafetyLocation.LocationType.values()[type];
         }
 
-        locations = loadLocations(locationType);
+        locations = loadLocations();
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+    }
+
+    protected ArrayList<SafetyLocation> loadLocations() {
+        ArrayList<SafetyLocation> locations = null;
+        String jsonFile = "locations.json";
+        String xmlFile = "locations.xml";
+
+        if (locationsFromJSON) {
+            JSONObject json = loadJSONFromAsset(jsonFile);
+
+            if (json != null) {
+                locations = SafetyLocation.locationsFromJSON(json);
+            }
+        } else {
+            locations = loadXMLFromAsset(xmlFile);
+        }
+
+        return locations;
     }
 
     protected ArrayList<SafetyLocation> loadLocations(SafetyLocation.LocationType locationType) {
@@ -94,9 +112,9 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                 break;
         }
 
-        JSONObject json = loadJSONFromAsset(jsonFile);
-
         if (locationsFromJSON) {
+            JSONObject json = loadJSONFromAsset(jsonFile);
+
             if (json != null) {
                 locations = SafetyLocation.locationsFromJSON(json);
             }
@@ -218,12 +236,14 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
             LatLng position = new LatLng(zoom.latitude, zoom.longitude);
 
             for (SafetyLocation location : locations) {
-                MarkerOptions markerOptions = new MarkerOptions()
-                        .position(new LatLng(location.latitude, location.longitude))
-                        .title(location.name)
-                        .snippet(location.address)
-                        .icon(BitmapDescriptorFactory.defaultMarker(markerHue(locationType)));
-                mMap.addMarker(markerOptions);
+                if (location.type == locationType) {
+                    MarkerOptions markerOptions = new MarkerOptions()
+                            .position(new LatLng(location.latitude, location.longitude))
+                            .title(location.name)
+                            .snippet(location.address)
+                            .icon(BitmapDescriptorFactory.defaultMarker(markerHue(locationType)));
+                    mMap.addMarker(markerOptions);
+                }
             }
 
             // get the user's current location
