@@ -73,7 +73,11 @@ public class SafetyLocation {
 
                 if (json.has("location_type")) {
                     int type = json.getInt("location_type");
-                    location.type = SafetyLocation.LocationType.values()[type - 1];
+                    if (type > LocationType.swimLocation.ordinal() && type <= LocationType.pillDropLocation.ordinal() + 1) {
+                        location.type = SafetyLocation.LocationType.values()[type - 1];
+                    } else {
+                        location.type = LocationType.swimLocation;
+                    }
                 }
 
             } catch (JSONException ex) {
@@ -224,7 +228,12 @@ public class SafetyLocation {
         parser.require(XmlPullParser.START_TAG, ns, "locationType");
         int locType = readInteger(parser);
         parser.require(XmlPullParser.END_TAG, ns, "locationType");
-        return LocationType.values()[locType - 1];
+
+        if (locType > LocationType.swimLocation.ordinal() && locType <= LocationType.pillDropLocation.ordinal() + 1) {
+            return LocationType.values()[locType - 1];
+        } else {
+            return LocationType.swimLocation;
+        }
     }
 
     private static String readText(XmlPullParser parser) throws IOException, XmlPullParserException {
