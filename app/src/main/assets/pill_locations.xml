@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locations>
+    <location>
+        <name>CSC Palm Beach</name>
+        <address type="text">2300 High Ridge Rd, Boynton Beach, FL 33426</address>
+        <description type="text">CSC Palm Beach</description>
+        <latitude type="text">26.551748</latitude>
+        <longitude type="text">-80.071720</longitude>
+        <locationType type="text">4</locationType>
+    </location>
+    <location>
+        <name>CSC Palm Beach #2</name>
+        <address type="text">2300 High Ridge Rd, Boynton Beach, FL 33426</address>
+        <description type="text">CSC Palm Beach</description>
+        <latitude type="text">26.552748</latitude>
+        <longitude type="text">-80.072720</longitude>
+        <locationType type="text">4</locationType>
+    </location>
+</locations>

@@ -28,6 +28,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,6 +42,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
     private GoogleMap mMap;
     private SafetyLocation.LocationType locationType = SafetyLocation.LocationType.swimLocation;
     private ArrayList<SafetyLocation> locations;
+    private boolean locationsFromJSON = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,30 +69,39 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
     protected ArrayList<SafetyLocation> loadLocations(SafetyLocation.LocationType locationType) {
         ArrayList<SafetyLocation> locations = null;
         String jsonFile;
+        String xmlFile;
 
         switch (locationType) {
             case swimLocation:
                 jsonFile = "swim_locations.json";
+                xmlFile = "swim_locations.xml";
                 break;
 
             case carSeatLocation:
                 jsonFile = "car_locations.json";
+                xmlFile = "car_locations.xml";
                 break;
 
             case helmetLocation:
                 jsonFile = "helmet_locations.json";
+                xmlFile = "helmet_locations.xml";
                 break;
 
             case pillDropLocation:
             default:
                 jsonFile = "pill_locations.json";
+                xmlFile = "pill_locations.xml";
                 break;
         }
 
         JSONObject json = loadJSONFromAsset(jsonFile);
 
-        if (json != null) {
-            locations = SafetyLocation.locationsFromJSON(json);
+        if (locationsFromJSON) {
+            if (json != null) {
+                locations = SafetyLocation.locationsFromJSON(json);
+            }
+        } else {
+            locations = loadXMLFromAsset(xmlFile);
         }
 
         return locations;
@@ -298,5 +309,27 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         }
 
         return json;
+    }
+
+    protected ArrayList<SafetyLocation> loadXMLFromAsset(String xmlFile) {
+
+        ArrayList<SafetyLocation> ret = null;
+
+        try {
+            InputStream is = getAssets().open(xmlFile);
+
+            int size = is.available();
+
+            if (size > 0) {
+                ret = SafetyLocation.parse(is);
+            }
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        }
+
+        return ret;
     }
 }
