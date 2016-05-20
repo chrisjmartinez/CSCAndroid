@@ -28,6 +28,7 @@ public class SafetyLocation {
 
     public String name;
     public String address;
+    public String phone;
     public String description;
     public double latitude;
     public double longitude;
@@ -57,6 +58,10 @@ public class SafetyLocation {
 
                 if (json.has("address")) {
                     location.address = json.getString("address");
+                }
+
+                if (json.has("phone")) {
+                    location.phone = json.getString("phone");
                 }
 
                 if (json.has("latitude")) {
@@ -152,6 +157,7 @@ public class SafetyLocation {
         parser.require(XmlPullParser.START_TAG, ns, "location");
         String name = null;
         String address = null;
+        String phone = null;
         String description = null;
         LocationType locationType;
         double latitude;
@@ -170,6 +176,9 @@ public class SafetyLocation {
             } else if (node.equals("address")) {
                 address = readAddress(parser);
                 safetyLocation.address = address;
+            } else if (node.equals("phone")) {
+                phone = readPhone(parser);
+                safetyLocation.phone = phone;
             } else if (node.equals("latitude")) {
                 latitude = readLatitude(parser);
                 safetyLocation.latitude = latitude;
@@ -201,6 +210,13 @@ public class SafetyLocation {
         String address = readText(parser);
         parser.require(XmlPullParser.END_TAG, ns, "address");
         return address;
+    }
+
+    private static String readPhone(XmlPullParser parser) throws IOException, XmlPullParserException {
+        parser.require(XmlPullParser.START_TAG, ns, "phone");
+        String phone = readText(parser);
+        parser.require(XmlPullParser.END_TAG, ns, "phone");
+        return phone;
     }
 
     private static String readDescription(XmlPullParser parser) throws IOException, XmlPullParserException {

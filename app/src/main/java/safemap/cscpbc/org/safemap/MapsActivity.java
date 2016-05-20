@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.location.Address;
 import android.location.Criteria;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -33,6 +35,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
@@ -218,18 +221,6 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
         }
 
-        /*
-        LatLng cscPalmBeach = new LatLng(26.551748, -80.071720);
-        MarkerOptions markerOptions = new MarkerOptions()
-                .position(cscPalmBeach)
-                .title("CSC Palm Beach")
-                .snippet("2300 High Ridge Rd, Boynton Beach, FL 33426")
-                .icon(BitmapDescriptorFactory.defaultMarker(markerHue(locationType)));
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(markerOptions.getPosition()).zoom(18).build();
-        mMap.addMarker(markerOptions);
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        */
-
         if (locations != null && locations.size() > 0) {
             // use the first location as a zoom focal point
             SafetyLocation zoom = locations.get(0);
@@ -237,8 +228,22 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
 
             for (SafetyLocation location : locations) {
                 if (location.type == locationType) {
+                    LatLng latLng = null;
+
+                    try {
+                        latLng = getLocationFromAddress(location.address);
+                    }
+                    catch (Exception ex) {
+                        latLng = new LatLng(location.latitude, location.longitude);
+                        ex.printStackTrace();
+                    }
+
+                    if (latLng == null) {
+                        latLng = new LatLng(location.latitude, location.longitude);
+                    }
+
                     MarkerOptions markerOptions = new MarkerOptions()
-                            .position(new LatLng(location.latitude, location.longitude))
+                            .position(latLng)
                             .title(location.name)
                             .snippet(location.address)
                             .icon(BitmapDescriptorFactory.defaultMarker(markerHue(locationType)));
@@ -262,7 +267,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                         @Override
                         public void onLocationChanged(Location location) {
                             LatLng position = new LatLng(location.getLatitude(), location.getLongitude());
-                            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(10).build();
+                            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(9).build();
                             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                         }
 
@@ -286,7 +291,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                 }
             }
 
-            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(10).build();
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(9).build();
             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         }
 
@@ -351,5 +356,30 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         }
 
         return ret;
+    }
+
+    public LatLng getLocationFromAddress(String strAddress){
+
+        Geocoder coder = new Geocoder(this);
+        List<Address> address;
+        LatLng p1 = null;
+
+        try {
+            address = coder.getFromLocationName(strAddress,5);
+            if (address==null) {
+                return null;
+            }
+            Address location=address.get(0);
+            location.getLatitude();
+            location.getLongitude();
+
+            p1 = new LatLng(location.getLatitude(), location.getLongitude());
+
+            return p1;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+
+        return p1;
     }
 }

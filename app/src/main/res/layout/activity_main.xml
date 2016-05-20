@@ -15,9 +15,9 @@
             android:weightSum="5">
             <Button
                 android:id="@+id/buttonSwim"
-                android:background="@mipmap/ic_launcher"
+                android:background="@drawable/swim"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="100dip"
                 android:layout_weight="1"
                 android:text="@string/swimLessonsLabel"
                 android:textColor="@color/colorImageText"
@@ -27,7 +27,7 @@
                 android:id="@+id/buttonCarSeat"
                 android:background="@mipmap/ic_launcher"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="100dip"
                 android:layout_weight="1"
                 android:text="@string/carSeatLabel"
                 android:textColor="@color/colorImageText"
@@ -35,9 +35,9 @@
                 android:onClick="carSeatButtonClick" />
             <Button
                 android:id="@+id/buttonHelmet"
-                android:background="@mipmap/ic_launcher"
+                android:background="@drawable/helmet"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="100dip"
                 android:layout_weight="1"
                 android:text="@string/helmetFittingLabel"
                 android:textColor="@color/colorImageText"
@@ -47,7 +47,7 @@
                 android:id="@+id/buttonPillDrop"
                 android:background="@mipmap/ic_launcher"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="100dip"
                 android:layout_weight="1"
                 android:text="@string/pillDropOffLabel"
                 android:textColor="@color/colorImageText"
@@ -65,9 +65,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center_vertical|left"
+                    android:padding="5dp"
                     android:onClick="emailClick" />
                 <ImageView
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/logo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
@@ -77,6 +79,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:padding="5dp"
                     android:onClick="websiteClick" />
             </LinearLayout>
         </LinearLayout>

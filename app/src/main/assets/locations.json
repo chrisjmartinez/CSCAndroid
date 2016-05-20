@@ -1,68 +1,211 @@
 {
   "locations":[
     {
-      "name":"CSC Palm Beach",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.551748",
-      "longitude":"-80.071720",
-      "description":"CSC Palm Beach",
+      "name":"Belle	Glade Pool",
+      "address":"1224 SW Ave E Place, Belle Glade, FL 33430",
+      "phone":"561-993-0728",
+      "latitude":"26.681778",
+      "longitude":"-80.680487",
+      "description":"",
       "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach #2",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.552748",
-      "longitude":"-80.072720",
-      "description":"CSC Palm Beach",
+      "name":"Pioneer Park Aquatic Center",
+      "address":"866 State Road 715, Belle Glade, FL 33430",
+      "phone":"561-993-3892",
+      "latitude":"26.671008",
+      "longitude":"-80.684676",
+      "description":"Pioneer Park Aquatic Center",
       "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.551748",
-      "longitude":"-80.071720",
-      "description":"CSC Palm Beach",
-      "location_type":"2"
+      "name":"The Swim Center",
+      "address":"21618 St. Andrews Blvd., Boca Raton, FL 33433",
+      "phone":"561-544-8540",
+      "latitude":"26.356569",
+      "longitude":"-80.135867",
+      "description":"The Swim Center",
+      "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach #2",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.552748",
-      "longitude":"-80.072720",
-      "description":"CSC Palm Beach",
-      "location_type":"2"
+      "name":"Meadows Park Pool",
+      "address":"1300 NW 8th St., Boca Raton FL 33486",
+      "phone":"561-393-7851",
+      "latitude":"26.359529",
+      "longitude":"-80.114478",
+      "description":"Meadows Park Pool",
+      "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.551748",
-      "longitude":"-80.071720",
-      "description":"CSC Palm Beach",
-      "location_type":"3"
+      "name":"YMCA,",
+      "address":"6631 Palmetto Circle South, Boca Raton, FL 33433",
+      "phone":"561-395-9622",
+      "latitude":"26.353375",
+      "longitude":"-80.148309",
+      "description":"YMCA,",
+      "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach #2",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.552748",
-      "longitude":"-80.072720",
-      "description":"CSC Palm Beach",
-      "location_type":"3"
+      "name":"JCC Boca Raton",
+      "address":"9801 Donna Klein Blvd., Boca Raton, FL 33428",
+      "phone":"561-852-3200",
+      "latitude":"26.359103",
+      "longitude":"-80.195220",
+      "description":"JCC Boca Raton",
+      "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.551748",
-      "longitude":"-80.071720",
-      "description":"CSC Palm Beach",
-      "location_type":"4"
+      "name":"Coconut Cove Waterpark",
+      "address":"20130 Regional Park Drive, Boca Raton, FL 33498",
+      "phone":"561-629-8840",
+      "latitude":"26.376657",
+      "longitude":"-80.225720",
+      "description":"Coconut Cove Waterpark",
+      "location_type":"1"
     },
     {
-      "name":"CSC Palm Beach #2",
-      "address":"2300 High Ridge Rd, Boynton Beach, FL 33426",
-      "latitude":"26.552748",
-      "longitude":"-80.072720",
-      "description":"CSC Palm Beach",
-      "location_type":"4"
+      "name":"John Denson Pool at Wilson Park",
+      "address":"225 NW 12th Ave., Boynton Beach, FL 33435",
+      "phone":"561-629-8840",
+      "latitude":"26.537998",
+      "longitude":"-80.067653",
+      "description":"John Denson Pool at Wilson Park",
+      "location_type":"1"
+    },
+    {
+      "name":"YMCA of South Palm Beach County",
+      "address":"9600 Military Trail, Boynton Beach, FL 33436",
+      "phone":"561-738-9622",
+      "latitude":"26.533366",
+      "longitude":"-80.122074",
+      "description":"YMCA of South Palm Beach County",
+      "location_type":"1"
+    },
+    {
+      "name":"Mandel JCC of the Palm Beaches",
+      "address":"8500 Jog Road, Boynton Beach, FL 33437",
+      "phone":"561-487-8276",
+      "latitude":"26.550110",
+      "longitude":"-80.148613",
+      "description":"Mandel JCC of the Palm Beaches",
+      "location_type":"1"
+    },
+    {
+      "name":"Aqua Crest Pool",
+      "address":"2503 Seacrest Blvd., Delray Beach, FL 33444",
+      "phone":"561-278-7104",
+      "latitude":"26.489207",
+      "longitude":"-80.070642",
+      "description":"Aqua Crest Pool",
+      "location_type":"1"
+    },
+    {
+      "name":"Pompey Park Pool",
+      "address":"1101 NW 2nd St., Delray Beach, FL 33444",
+      "phone":"561-243-7358",
+      "latitude":"26.466226",
+      "longitude":"-80.084232",
+      "description":"Pompey Park Pool",
+      "location_type":"1"
+    },
+    {
+      "name":"North County Aquatic Complex",
+      "address":"861 Toney Penna Dr., Jupiter, FL 33458",
+      "phone":"561-745-0241",
+      "latitude":"26.927081",
+      "longitude":"-80.109588",
+      "description":"North County Aquatic Complex",
+      "location_type":"1"
+    },
+    {
+      "name":"Gleneagles Country Club Aquatic Center/ Palm Beach County CMAA Therapeutic Recreation Complex",
+      "address":"2728 Lake Worth Road, Lake Worth, FL 33461",
+      "phone":"561-966-7080",
+      "latitude":"26.616301",
+      "longitude":"-80.084622",
+      "description":"Gleneagles Country Club Aquatic Center/ Palm Beach County CMAA Therapeutic Recreation Complex",
+      "location_type":"1"
+    },
+    {
+      "name":"Santaluces Aquatic Complex",
+      "address":"6750 Lawrence Road, Lantana, FL 33462",
+      "phone":"561-641-9301",
+      "latitude":"26.576830",
+      "longitude":"-80.101961",
+      "description":"Santaluces Aquatic Complex",
+      "location_type":"1"
+    },
+    {
+      "name":"North Palm Beach Country Club",
+      "address":"951 U.S. Highway 1, North Palm Beach, FL 33408",
+      "phone":"561-691-3427",
+      "latitude":"26.827438",
+      "longitude":"-80.061492",
+      "description":"North Palm Beach Country Club",
+      "location_type":"1"
+    },
+    {
+      "name":"Palm Beach Gardens Aquatic Complex",
+      "address":"4404 Burns Road, Palm Beach Gardens, FL 33410",
+      "phone":"561-630-1126",
+      "latitude":"26.829802",
+      "longitude":"-80.102928",
+      "description":"Palm Beach Gardens Aquatic Complex",
+      "location_type":"1"
+    },
+    {
+      "name":"Barracuda Bay",
+      "address":"1621 W. Blue Heron Blvd., Riviera Beach, FL 33404",
+      "phone":"561-845-4070",
+      "latitude":"26.781342",
+      "longitude":"-80.081142",
+      "description":"Barracuda Bay",
+      "location_type":"1"
+    },
+    {
+      "name":"Calypso Bay Waterpark",
+      "address":"151 Lamstein Lane, Royal Palm Beach, FL 33411",
+      "phone":"561-790-6160",
+      "latitude":"26.685435",
+      "longitude":"-80.222859",
+      "description":"Calypso Bay Waterpark",
+      "location_type":"1"
+    },
+    {
+      "name":"Wellington Aquatics Complex",
+      "address":"12150 Forest Hill Blvd., Wellington, FL 33414",
+      "phone":"561-791-4770",
+      "latitude":"26.655058",
+      "longitude":"-80.236608",
+      "description":"Wellington Aquatics Complex",
+      "location_type":"1"
+    },
+    {
+      "name": "Warren Hawkins Aquatic Center",
+      "address": "1501 N. Australian Ave., West Palm Beach, FL 33401",
+      "phone": "561-804-4961",
+      "latitude": "26.727967",
+      "longitude": "-80.069471",
+      "description": "Warren Hawkins Aquatic Center",
+      "location_type": "1"
+    },
+    {
+      "name": "Lake Lytal Family Aquatic Center",
+      "address": "3645 Gun Club Road, West Palm Beach, FL 33406",
+      "phone": "561-233-1426",
+      "latitude": "26.675390",
+      "longitude": "-80.098705",
+      "description": "Lake Lytal Family Aquatic Center",
+      "location_type": "1"
+    },
+    {
+      "name": "YMCA of the Palm Beaches",
+      "address": "1501 N. Australian Ave., West Palm Beach, FL 33406",
+      "phone": "561-968-9622",
+      "latitude": "26.727909",
+      "longitude": "-80.069503",
+      "description": "YMCA of the Palm Beaches",
+      "location_type": "1"
     }
   ]
 }
