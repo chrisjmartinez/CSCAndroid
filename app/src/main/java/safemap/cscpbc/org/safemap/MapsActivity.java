@@ -35,7 +35,9 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback {
 
@@ -46,6 +48,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
     private SafetyLocation.LocationType locationType = SafetyLocation.LocationType.swimLocation;
     private ArrayList<SafetyLocation> locations;
     private boolean locationsFromJSON = true;
+    private Map<Marker, SafetyLocation> allMarkersMap = new HashMap<Marker, SafetyLocation>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -231,7 +234,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                     LatLng latLng = null;
 
                     try {
-                        latLng = getLocationFromAddress(location.address);
+                        //-TODO this delays loading time latLng = getLocationFromAddress(location.address);
                     }
                     catch (Exception ex) {
                         latLng = new LatLng(location.latitude, location.longitude);
@@ -247,7 +250,8 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                             .title(location.name)
                             .snippet(location.address)
                             .icon(BitmapDescriptorFactory.defaultMarker(markerHue(locationType)));
-                    mMap.addMarker(markerOptions);
+                    Marker marker = mMap.addMarker(markerOptions);
+                    allMarkersMap.put(marker, location);
                 }
             }
 
@@ -300,12 +304,15 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
 
     @Override
     public void onInfoWindowClick(Marker marker) {
+        SafetyLocation location = allMarkersMap.get(marker);
+
         Intent intent = new Intent(MapsActivity.this, MapDetailActivity.class);
         intent.putExtra(MapDetailActivity.DETAIL_SUBJECT, markerTitle(locationType));
         intent.putExtra(MapDetailActivity.DETAIL_NAME, marker.getTitle());
         intent.putExtra(MapDetailActivity.DETAIL_ADDRESS, marker.getSnippet());
         intent.putExtra(MapDetailActivity.DETAIL_LAT, marker.getPosition().latitude);
         intent.putExtra(MapDetailActivity.DETAIL_LNG, marker.getPosition().longitude);
+        intent.putExtra(MapDetailActivity.DETAIL_EXTRAS, location.description);
         MapsActivity.this.startActivity(intent);
     }
 

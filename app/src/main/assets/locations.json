@@ -1,7 +1,8 @@
 {
+  "version":1234,
   "locations":[
     {
-      "name":"Belle	Glade Pool",
+      "name":"Belle Glade Pool",
       "address":"1224 SW Ave E Place, Belle Glade, FL 33430",
       "phone":"561-993-0728",
       "latitude":"26.681778",
@@ -15,7 +16,7 @@
       "phone":"561-993-3892",
       "latitude":"26.671008",
       "longitude":"-80.684676",
-      "description":"Pioneer Park Aquatic Center",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -24,7 +25,7 @@
       "phone":"561-544-8540",
       "latitude":"26.356569",
       "longitude":"-80.135867",
-      "description":"The Swim Center",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -33,7 +34,7 @@
       "phone":"561-393-7851",
       "latitude":"26.359529",
       "longitude":"-80.114478",
-      "description":"Meadows Park Pool",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -42,7 +43,7 @@
       "phone":"561-395-9622",
       "latitude":"26.353375",
       "longitude":"-80.148309",
-      "description":"YMCA,",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -51,7 +52,7 @@
       "phone":"561-852-3200",
       "latitude":"26.359103",
       "longitude":"-80.195220",
-      "description":"JCC Boca Raton",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -60,7 +61,7 @@
       "phone":"561-629-8840",
       "latitude":"26.376657",
       "longitude":"-80.225720",
-      "description":"Coconut Cove Waterpark",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -69,7 +70,7 @@
       "phone":"561-629-8840",
       "latitude":"26.537998",
       "longitude":"-80.067653",
-      "description":"John Denson Pool at Wilson Park",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -78,7 +79,7 @@
       "phone":"561-738-9622",
       "latitude":"26.533366",
       "longitude":"-80.122074",
-      "description":"YMCA of South Palm Beach County",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -87,7 +88,7 @@
       "phone":"561-487-8276",
       "latitude":"26.550110",
       "longitude":"-80.148613",
-      "description":"Mandel JCC of the Palm Beaches",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -96,7 +97,7 @@
       "phone":"561-278-7104",
       "latitude":"26.489207",
       "longitude":"-80.070642",
-      "description":"Aqua Crest Pool",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -105,7 +106,7 @@
       "phone":"561-243-7358",
       "latitude":"26.466226",
       "longitude":"-80.084232",
-      "description":"Pompey Park Pool",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -114,7 +115,7 @@
       "phone":"561-745-0241",
       "latitude":"26.927081",
       "longitude":"-80.109588",
-      "description":"North County Aquatic Complex",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -123,7 +124,7 @@
       "phone":"561-966-7080",
       "latitude":"26.616301",
       "longitude":"-80.084622",
-      "description":"Gleneagles Country Club Aquatic Center/ Palm Beach County CMAA Therapeutic Recreation Complex",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -132,7 +133,7 @@
       "phone":"561-641-9301",
       "latitude":"26.576830",
       "longitude":"-80.101961",
-      "description":"Santaluces Aquatic Complex",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -141,7 +142,7 @@
       "phone":"561-691-3427",
       "latitude":"26.827438",
       "longitude":"-80.061492",
-      "description":"North Palm Beach Country Club",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -150,7 +151,7 @@
       "phone":"561-630-1126",
       "latitude":"26.829802",
       "longitude":"-80.102928",
-      "description":"Palm Beach Gardens Aquatic Complex",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -159,7 +160,7 @@
       "phone":"561-845-4070",
       "latitude":"26.781342",
       "longitude":"-80.081142",
-      "description":"Barracuda Bay",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -168,7 +169,7 @@
       "phone":"561-790-6160",
       "latitude":"26.685435",
       "longitude":"-80.222859",
-      "description":"Calypso Bay Waterpark",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -177,7 +178,7 @@
       "phone":"561-791-4770",
       "latitude":"26.655058",
       "longitude":"-80.236608",
-      "description":"Wellington Aquatics Complex",
+      "description":"",
       "location_type":"1"
     },
     {
@@ -186,7 +187,7 @@
       "phone": "561-804-4961",
       "latitude": "26.727967",
       "longitude": "-80.069471",
-      "description": "Warren Hawkins Aquatic Center",
+      "description": "",
       "location_type": "1"
     },
     {
@@ -195,7 +196,7 @@
       "phone": "561-233-1426",
       "latitude": "26.675390",
       "longitude": "-80.098705",
-      "description": "Lake Lytal Family Aquatic Center",
+      "description": "",
       "location_type": "1"
     },
     {
@@ -204,8 +205,71 @@
       "phone": "561-968-9622",
       "latitude": "26.727909",
       "longitude": "-80.069503",
-      "description": "YMCA of the Palm Beaches",
+      "description": "",
       "location_type": "1"
+    },
+    {
+      "name": "Palm Beach County Fire Rescue Station 57",
+      "address": "9030 Vista Del Lago, Boca Raton, FL 33428",
+      "phone": "561-616-7033",
+      "latitude": "26.352905",
+      "longitude": "-80.187342",
+      "description": "Fittings are done the third Wednesday of the month from 8:30 a.m. - 12:30 p.m.  Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Boca Raton Police Department",
+      "address": "190 SW 18th St., Boca Raton, FL 33432",
+      "phone": "561-347-3931",
+      "latitude": "26.332004",
+      "longitude": "-80.095719",
+      "description": "For Boca Raton residents only.  Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Boynton Beach Fire Rescue",
+      "address": "3501 N. Congress Ave., Boynton	Beach, FL 33436",
+      "phone": "561-742-6343",
+      "latitude": "26.484174",
+      "longitude": "-80.089778",
+      "description": "To schedule an appointment, please leave a message for Sue McMath.",
+      "location_type": "2"
+    },
+    {
+      "name": "AutoNation Chevrolet of Greenacres",
+      "address": "5757 Lake Worth Rd., Greenacres, FL 33463",
+      "phone": "561-841-3500, ext. 4012",
+      "latitude": "26.620319",
+      "longitude": "-80.132041",
+      "description": "Fittings are done the third Thursday of the month from 2:30 - 5:30 p.m. Please call AutoNation to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Greenacres Public Safety",
+      "address": "2995 Jog Rd., Greenacres, FL 33467",
+      "phone": "561-642-2133",
+      "latitude": "26.633298",
+      "longitude": "-80.146656",
+      "description": "For Greenacres residents only. Fittings are done on Wednesdays from 2 - 5 p.m. Call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Jupiter Police Dept.",
+      "address": "210 Military Trail, Jupiter, FL 33458",
+      "phone": "561-741-2383",
+      "latitude": "26.932187",
+      "longitude": "-80.102608",
+      "description": "For Jupiter residents only. To schedule an appointment, please call and leave a message.",
+      "location_type": "2"
+    },
+    {
+      "name": "Palm Beach County Fire Rescue Station 16",
+      "address": "3550 Military Trail, Jupiter, FL 33458",
+      "phone": "561-616-7033",
+      "latitude": "26.900447",
+      "longitude": "-80.103677",
+      "description": "Fittings are done the first Wednesday of the month from 8:30 a.m. - 12:30 p.m. Please call to schedule an appointment.",
+      "location_type": "2"
     }
   ]
 }

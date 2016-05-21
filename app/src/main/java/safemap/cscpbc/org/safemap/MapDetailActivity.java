@@ -41,6 +41,7 @@ public class MapDetailActivity extends AppCompatActivity {
             String address = extras.getString(DETAIL_ADDRESS);
             String extra = extras.getString(DETAIL_EXTRAS);
 
+            setTitle(name);
             textSubject.setText(subject);
             textName.setText(name);
             textAddress.setText(address);

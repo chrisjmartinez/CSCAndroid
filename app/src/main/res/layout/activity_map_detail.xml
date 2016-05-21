@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_margin="10dip" />
     <TextView
         android:id="@+id/detailName"
         android:text="Name"
@@ -20,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_margin="10dip" />
     <TextView
         android:id="@+id/detailAddress"
         android:text="Address"
@@ -28,7 +30,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:autoLink="map"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_margin="10dip" />
     <!-- These properties are mutually exclusive above -->
     <!-- android:autoLink="map" -->
     <!-- android:onClick="addressClick" -->
@@ -39,7 +42,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center_horizontal"/>
+        android:gravity="center_horizontal"
+        android:layout_margin="10dip" />
     <ImageView
         android:src="@drawable/logo"
         android:layout_width="match_parent"
