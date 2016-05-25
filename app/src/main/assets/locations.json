@@ -270,6 +270,366 @@
       "longitude": "-80.103677",
       "description": "Fittings are done the first Wednesday of the month from 8:30 a.m. - 12:30 p.m. Please call to schedule an appointment.",
       "location_type": "2"
+    },
+    {
+      "name": "Palm Beach County Fire Rescue Station 37",
+      "address": "500 Greynolds Circle, Lantana, FL 33462",
+      "phone": "561-616-7033",
+      "latitude": "26.576785",
+      "longitude": "-80.055465",
+      "description": "Fittings are done the first Wednesday of the month from 8:30 a.m. - 12:30 p.m. Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Palm Beach Gardens Police Department",
+      "address": "10500 N. Military Trail, Palm Beach Gardens, FL 33410",
+      "phone": "561-799-4592",
+      "latitude": "26.833077",
+      "longitude": "-80.104810",
+      "description": "For Palm Beach Gardens residents only. Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Palm Spring Police Department",
+      "address": "230 Cypress Lane, Palm Springs, FL 33461",
+      "phone": "561-968-8243",
+      "latitude": "26.641718",
+      "longitude": "-80.095166",
+      "description": "For Palm Springs residents only. Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Safety Council of Palm Beach County",
+      "address": "4152 W. Blue Heron Blvd., Suite 110, Riviera Beach, FL 33404",
+      "phone": "561-845-8233",
+      "latitude": "26.785010",
+      "longitude": "-80.101970",
+      "description": "Fittings are done on Fridays. Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Palm Beach County Fire Rescue Station 28",
+      "address": "1040 Royal Palm Beach Blvd., Royal Palm Beach FL 33411",
+      "phone": "561-616-7033",
+      "latitude": "26.704355",
+      "longitude": "-80.228936",
+      "description": "Fittings are done every fourth Wednesday of the month from 8:30 a.m. - 12:30 p.m.  Please call to schedule an appointment.",
+      "location_type": "2"
+    },
+    {
+      "name": "Boca Raton Bicycle Club",
+      "address": "100 NW Boca Raton Blvd., Boca Raton, FL 33432",
+      "phone": "561-451-9733",
+      "latitude": "26.352052",
+      "longitude": "-80.088990",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "BRIDGES at Lake Worth West",
+      "address": "4730 Maine St., Lake Worth, FL 33461",
+      "phone": "561-649-9600",
+      "latitude": "26.610119",
+      "longitude": "-80.107475",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "Ocean Ridge Police Department",
+      "address": "6450 N. Ocean Blvd., Ocean Ridge, FL 33435",
+      "phone": "561-732-8331",
+      "latitude": "26.529602",
+      "longitude": "-80.048820",
+      "description": "Please call to schedule an appointment with Inv. Jones or Sgt. Stang.",
+      "location_type": "3"
+    },
+    {
+      "name": "Safety Council of Palm Beach County",
+      "address": "4152 W. Blue Heron Blvd., Suite 110, Riviera Beach, FL 33404",
+      "phone": "561-845-8233 ext. 11",
+      "latitude": "26.785010",
+      "longitude": "-80.101991",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "Safe Kids Palm Beach County",
+      "address": "2001 W. Blue Heron Blvd., Riviera Beach, FL 33404",
+      "phone": "561-727-1047",
+      "latitude": "26.782095",
+      "longitude": "-80.087966",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "PBC Sheriff Office Village of Royal Palm Beach",
+      "address": "11498 Okeechobee Blvd., Royal Palm Beach, FL 33411",
+      "phone": "561-904-8241",
+      "latitude": "26.705876",
+      "longitude": "-80.227152",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "Village of Wellington Community Services",
+      "address": "1092 Wellington Trace, Wellington, FL 33414",
+      "phone": "561-791-4764",
+      "latitude": "26.665487",
+      "longitude": "-80.235781",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "Jack the Bike Man",
+      "address": "2406 Florida Ave., West Palm Beach, FL 33401",
+      "phone": "561-832-0071",
+      "latitude": "26.693106",
+      "longitude": "-80.056128",
+      "description": "Please call to schedule an appointment.",
+      "location_type": "3"
+    },
+    {
+      "name": "Epilepsy Foundation of Florida",
+      "address": "3222 Commerce Pl., Suite B, West Palm Beach, FL 33407",
+      "phone": "561-478-6515",
+      "latitude": "26.761334",
+      "longitude": "-80.101196",
+      "description": "Please call to schedule an appointment.  Serves the entire county.",
+      "location_type": "3"
+    },
+    {
+      "name": "Atlantis Police Department",
+      "address": "260 Orange Tree Dr., Atlantis, FL 33462",
+      "phone": "561-965-1700",
+      "latitude": "26.595409",
+      "longitude": "-80.097148",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 5",
+      "address": "38840 State Road 80, Belle Glade, FL 33430",
+      "phone": "561-996-1670",
+      "latitude": "26.695340",
+      "longitude": "-80.667720",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Boca Raton Police Department",
+      "address": "100 NW Boca Raton Blvd., Boca Raton, FL 33432",
+      "phone": "561-338-1234",
+      "latitude": "26.352081",
+      "longitude": "-80.088969",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 7",
+      "address": "17901 State Road 7, Boca Raton, FL 33498",
+      "phone": "561-558-2700",
+      "latitude": "26.428772",
+      "longitude": "-80.205064",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Boynton Beach Police Department",
+      "address": "100 E. Boynton Beach Blvd., Boynton Beach, FL 33435",
+      "phone": "561-742-6100",
+      "latitude": "26.528678",
+      "longitude": "-80.063185",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Delray Beach Police Department",
+      "address": "300 West Atlantic Ave., Delray Beach, FL 33444",
+      "phone": "561-243-7800",
+      "latitude": "26.460992",
+      "longitude": "-80.076617",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 4",
+      "address": "345 S. Congress Ave., 2nd Floor, Delray Beach, FL 33445",
+      "phone": "561-274-1075",
+      "latitude": "26.455407",
+      "longitude": "-80.092671",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Greenacres Police Department",
+      "address": "2995 S. Jog Rd., Greenacres, FL 33467",
+      "phone": "561-642-2160",
+      "latitude": "26.633221",
+      "longitude": "-80.146635",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Lake Clarke Shores Police Department",
+      "address": "1701 Barbados Rd., Lake Clarke Shores, FL 33406",
+      "phone": "561-964-1515",
+      "latitude": "26.650346",
+      "longitude": "-80.077035",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 10",
+      "address": "700 6th St., Lake Park, FL 33403",
+      "phone": "561-881-3326",
+      "latitude": "26.799353",
+      "longitude": "-80.064195",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 14",
+      "address": "120 North G St., Lake Worth, FL 33460",
+      "phone": "561-586-1611",
+      "latitude": "26.617796",
+      "longitude": "-80.058996",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 6",
+      "address": "7894 South Jog Rd., Lake Worth, FL 33467",
+      "phone": "561-357-7000",
+      "latitude": "26.559024",
+      "longitude": "-80.146718",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Manalapan Police Department",
+      "address": "600 S. Ocean Blvd., Manalapan, FL 33462",
+      "phone": "561-585-9477",
+      "latitude": "26.580169",
+      "longitude": "-80.038952",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "North Palm Beach Police Department",
+      "address": "560 US Highway 1, North Palm Beach, FL 33408",
+      "phone": "561-882-1142",
+      "latitude": "26.812711",
+      "longitude": "-80.056244",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Ocean Ridge Police Dept.",
+      "address": "6450 N. Ocean Blvd., Ocean Ridge, FL 33435",
+      "phone": "561-732-8331",
+      "latitude": "26.529602",
+      "longitude": "-80.048852",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Palm Beach Police Dept.",
+      "address": "345 South County Rd., Palm Beach, FL 33480",
+      "phone": "561-838-5454",
+      "latitude": "26.703820",
+      "longitude": "-80.036010",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Palm Beach Gardens Police Dept.",
+      "address": "10500 N. Military Trail, Palm Beach Gardens, FL 33410",
+      "phone": "561-799-4406",
+      "latitude": "26.833029",
+      "longitude": "-80.104842",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Palm Beach Shores Police Dept.",
+      "address": "247 Edwards Lane, Palm Beach Shores, FL 33404",
+      "phone": "561-844-3456",
+      "latitude": "26.778854",
+      "longitude": "-80.037134",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Palm Springs Police Dept.",
+      "address": "230 Cypress Lane, Palm Springs, FL 33461",
+      "phone": "561-968-8243",
+      "latitude": "26.641699",
+      "longitude": "-80.095155",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 9",
+      "address": "11498 Okeechobee Blvd., Royal Palm Beach, FL 33411",
+      "phone": "561-790-5180",
+      "latitude": "26.705838",
+      "longitude": "-80.227195",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "South Palm Beach Police Dept.",
+      "address": "3577 S. Ocean Blvd., South Palm Beach, FL 33480",
+      "phone": "561-588-8889",
+      "latitude": "26.589651",
+      "longitude": "-80.039503",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "Village of Tequesta Police Dept.",
+      "address": "345 Tequesta Dr., Tequesta, FL 33469",
+      "phone": "561-768-0700",
+      "latitude": "26.959057",
+      "longitude": "-80.092668",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 8",
+      "address": "14000 Greenbrier Blvd., Wellington, FL 33414",
+      "phone": "561-688-5447",
+      "latitude": "26.639918",
+      "longitude": "-80.269912",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "West Palm Beach Police Dept.",
+      "address": "600 Banyan Blvd., West Palm Beach, FL 33401",
+      "phone": "561-822-1852",
+      "latitude": "26.714285",
+      "longitude": "-80.057512",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 1",
+      "address": "3228 Gun Club Rd., West Palm Beach, FL 33406",
+      "phone": "561-688-3600",
+      "latitude": "26.671994",
+      "longitude": "-80.092472",
+      "description": "",
+      "location_type": "4"
+    },
+    {
+      "name": "PBC Sheriff Office: District 3",
+      "address": "8130 Jog Rd., West Palm Beach, FL 33412",
+      "phone": "561-776-2000",
+      "latitude": "26.798355",
+      "longitude": "-80.136860",
+      "description": "",
+      "location_type": "4"
     }
   ]
 }
