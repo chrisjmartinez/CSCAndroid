@@ -65,6 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:textColor="@android:color/holo_blue_light"
                     android:gravity="center_vertical|left"
                     android:padding="5dp"
                     android:onClick="emailClick" />
@@ -79,6 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:textColor="@android:color/holo_blue_light"
                     android:gravity="center_vertical|right"
                     android:padding="5dp"
                     android:onClick="websiteClick" />
