@@ -19,6 +19,7 @@ public class MapDetailActivity extends AppCompatActivity {
     public static String DETAIL_LAT = "DETAIL_LAT";
     public static String DETAIL_LNG = "DETAIL_LNG";
 
+    private String address;
     private double lat;
     private double lng;
 
@@ -38,7 +39,7 @@ public class MapDetailActivity extends AppCompatActivity {
         if (extras != null) {
             String subject = extras.getString(DETAIL_SUBJECT);
             String name = extras.getString(DETAIL_NAME);
-            String address = extras.getString(DETAIL_ADDRESS);
+            address = extras.getString(DETAIL_ADDRESS);
             String extra = extras.getString(DETAIL_EXTRAS);
 
             setTitle(name);
@@ -53,7 +54,7 @@ public class MapDetailActivity extends AppCompatActivity {
     }
 
     public void addressClick(View v) {
-        Uri gmmIntentUri = Uri.parse(String.format(Locale.ENGLISH, "geo:%f,%f", lat, lng));
+        Uri gmmIntentUri = Uri.parse(String.format(Locale.ENGLISH, "geo:%f,%f?q=%s", lat, lng, address));
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
         mapIntent.setPackage("com.google.android.apps.maps");
         if (mapIntent.resolveActivity(getPackageManager()) != null) {

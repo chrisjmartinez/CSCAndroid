@@ -29,7 +29,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:autoLink="map"
+        android:textColor="@android:color/holo_blue_light"
+        android:onClick="addressClick"
         android:gravity="center_horizontal"
         android:layout_margin="10dip" />
     <!-- These properties are mutually exclusive above -->
