@@ -12,50 +12,58 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:weightSum="9">
+            android:weightSum="5">
             <Button
                 android:id="@+id/buttonSwim"
-                android:background="@drawable/swim"
+                android:background="@drawable/swim_lessons"
                 android:layout_width="match_parent"
                 android:layout_height="200dip"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/swimLessonsLabel"
                 android:textColor="@color/colorImageText"
                 android:gravity="left"
+                android:paddingTop="20dip"
+                android:paddingLeft="10dip"
                 android:onClick="swimButtonClick" />
             <Button
                 android:id="@+id/buttonCarSeat"
-                android:background="@mipmap/ic_launcher"
+                android:background="@drawable/car_seat_install"
                 android:layout_width="match_parent"
                 android:layout_height="200dip"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/carSeatLabel"
                 android:textColor="@color/colorImageText"
                 android:gravity="left"
+                android:paddingTop="20dip"
+                android:paddingLeft="10dip"
                 android:onClick="carSeatButtonClick" />
             <Button
                 android:id="@+id/buttonHelmet"
-                android:background="@drawable/helmet"
+                android:background="@drawable/helmet_fitting"
                 android:layout_width="match_parent"
                 android:layout_height="200dip"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/helmetFittingLabel"
                 android:textColor="@color/colorImageText"
                 android:gravity="left"
+                android:paddingTop="20dip"
+                android:paddingLeft="10dip"
                 android:onClick="helmetButtonClick" />
             <Button
                 android:id="@+id/buttonPillDrop"
-                android:background="@mipmap/ic_launcher"
+                android:background="@drawable/pill_drop_off"
                 android:layout_width="match_parent"
                 android:layout_height="200dip"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/pillDropOffLabel"
                 android:textColor="@color/colorImageText"
                 android:gravity="left"
+                android:paddingTop="20dip"
+                android:paddingLeft="10dip"
                 android:onClick="pillDropButtonClick" />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dip"
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 android:weightSum="3">
@@ -70,7 +78,7 @@
                     android:padding="5dp"
                     android:onClick="emailClick" />
                 <ImageView
-                    android:src="@drawable/logo"
+                    android:src="@drawable/stacked_csc_logo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"/>
