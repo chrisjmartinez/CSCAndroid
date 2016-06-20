@@ -38,7 +38,7 @@
       "location_type":"1"
     },
     {
-      "name":"YMCA,",
+      "name":"YMCA of South Palm Beach County",
       "address":"6631 Palmetto Circle South, Boca Raton, FL 33433",
       "phone":"561-395-9622",
       "latitude":"26.353375",
@@ -209,6 +209,33 @@
       "location_type": "1"
     },
     {
+      "name": "Small Fish Big Fish Swim School",
+      "address": "346 Pike Rd., West Palm Beach, 33411",
+      "phone": "561-818-7946",
+      "latitude": "26.684354",
+      "longitude": "-80.165274",
+      "description": "",
+      "location_type": "1"
+    },
+    {
+      "name": "Florida Swim School",
+      "address": "1082 S. Rogers Circle, Boca Raton, 33487",
+      "phone": "561-288-3817",
+      "latitude": "26.403462",
+      "longitude": "-80.108822",
+      "description": "",
+      "location_type": "1"
+    },
+    {
+      "name": "Lake Worth Municipal Pool",
+      "address": "10 S. Ocean Blvd, Lake Worth, FL 33460",
+      "phone": "561-585-6858",
+      "latitude": "26.614864",
+      "longitude": "-80.037213",
+      "description": "",
+      "location_type": "1"
+    },
+    {
       "name": "Palm Beach County Fire Rescue Station 57",
       "address": "9030 Vista Del Lago, Boca Raton, FL 33428",
       "phone": "561-616-7033",
@@ -228,7 +255,7 @@
     },
     {
       "name": "Boynton Beach Fire Rescue",
-      "address": "3501 N. Congress Ave., Boynton	Beach, FL 33436",
+      "address": "3501 N. Congress Ave., Boynton Beach, FL 33436",
       "phone": "561-742-6343",
       "latitude": "26.484174",
       "longitude": "-80.089778",
@@ -395,6 +422,15 @@
       "latitude": "26.761334",
       "longitude": "-80.101196",
       "description": "Please call to schedule an appointment.  Serves the entire county.",
+      "location_type": "3"
+    },
+    {
+      "name": "Village of Tequesta Police Dept.",
+      "address": "357 Tequesta Dr., Tequesta, FL 33469",
+      "phone": "561-768-0500",
+      "latitude": "26.959471",
+      "longitude": "-80.092608",
+      "description": "Please call to schedule an appointment.",
       "location_type": "3"
     },
     {
@@ -588,10 +624,10 @@
     },
     {
       "name": "Village of Tequesta Police Dept.",
-      "address": "345 Tequesta Dr., Tequesta, FL 33469",
-      "phone": "561-768-0700",
-      "latitude": "26.959057",
-      "longitude": "-80.092668",
+      "address": "357 Tequesta Dr., Tequesta, FL 33469",
+      "phone": "561-768-0500",
+      "latitude": "26.959471",
+      "longitude": "-80.092608",
       "description": "",
       "location_type": "4"
     },
