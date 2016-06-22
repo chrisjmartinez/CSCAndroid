@@ -1,53 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="safemap.cscpbc.org.safemap.MapsActivity"
-    android:weightSum="5">
+    tools:context="safemap.cscpbc.org.safemap.MapsActivity">
     <TextView
         android:id="@+id/detailSubject"
         android:text="Subject"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="36dip"
         android:gravity="center_horizontal"
-        android:layout_margin="10dip" />
+        android:layout_alignParentTop="true"
+        android:paddingTop="10dip"/>
     <TextView
         android:id="@+id/detailName"
         android:text="Name"
         android:textStyle="bold"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="36dip"
         android:gravity="center_horizontal"
-        android:layout_margin="10dip" />
+        android:layout_below="@id/detailSubject"
+        android:paddingTop="10dip"/>
     <TextView
         android:id="@+id/detailAddress"
         android:text="Address"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="42dip"
         android:textColor="@android:color/holo_blue_light"
         android:onClick="addressClick"
         android:gravity="center_horizontal"
-        android:layout_margin="10dip" />
+        android:layout_below="@id/detailName"
+        android:paddingTop="10dip"/>
     <!-- These properties are mutually exclusive above -->
     <!-- android:autoLink="map" -->
     <!-- android:onClick="addressClick" -->
 
     <TextView
+        android:id="@+id/detailPhone"
+        android:text="Phone"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="36dip"
+        android:textColor="@android:color/holo_blue_light"
+        android:autoLink="phone"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/detailAddress"
+        android:paddingTop="10dip"/>
+    <TextView
         android:id="@+id/detailExtras"
         android:text="Extras"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="72dip"
         android:gravity="center_horizontal"
-        android:layout_margin="10dip" />
-    <ImageView
-        android:src="@drawable/stacked_csc_logo"
+        android:layout_below="@id/detailPhone"
+        android:paddingTop="10dip"/>
+    <TextView
+        android:id="@+id/brought_to_you_by"
+        android:text="This app brought to you by:"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
-</LinearLayout>
+        android:layout_height="24dip"
+        android:gravity="center_horizontal"
+        android:layout_above="@+id/app_logo"/>
+    <ImageView
+        android:id="@+id/app_logo"
+        android:src="@drawable/stacked_csc_logo"
+        android:layout_width="175dip"
+        android:layout_height="175dip"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

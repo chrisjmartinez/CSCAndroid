@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.Locale;
 
 public class MapDetailActivity extends AppCompatActivity {
@@ -15,6 +17,7 @@ public class MapDetailActivity extends AppCompatActivity {
     public static String DETAIL_SUBJECT = "DETAIL_SUBJECT";
     public static String DETAIL_NAME = "DETAIL_NAME";
     public static String DETAIL_ADDRESS = "DETAIL_ADDRESS";
+    public static String DETAIL_PHONE = "DETAIL_PHONE";
     public static String DETAIL_EXTRAS = "DETAIL_EXTRAS";
     public static String DETAIL_LAT = "DETAIL_LAT";
     public static String DETAIL_LNG = "DETAIL_LNG";
@@ -33,6 +36,7 @@ public class MapDetailActivity extends AppCompatActivity {
         TextView textSubject = (TextView)findViewById(R.id.detailSubject);
         TextView textName = (TextView)findViewById(R.id.detailName);
         TextView textAddress = (TextView)findViewById(R.id.detailAddress);
+        TextView textPhone = (TextView)findViewById(R.id.detailPhone);
         TextView textExtras = (TextView)findViewById(R.id.detailExtras);
 
         Bundle extras = getIntent().getExtras();
@@ -40,12 +44,13 @@ public class MapDetailActivity extends AppCompatActivity {
             String subject = extras.getString(DETAIL_SUBJECT);
             String name = extras.getString(DETAIL_NAME);
             address = extras.getString(DETAIL_ADDRESS);
+            String phone = extras.getString(DETAIL_PHONE);
             String extra = extras.getString(DETAIL_EXTRAS);
 
-            setTitle(name);
             textSubject.setText(subject);
             textName.setText(name);
             textAddress.setText(address);
+            textPhone.setText(phone);
             textExtras.setText(extra);
 
             lat = extras.getDouble(DETAIL_LAT);

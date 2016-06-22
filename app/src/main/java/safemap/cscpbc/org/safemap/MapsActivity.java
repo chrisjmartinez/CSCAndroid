@@ -271,7 +271,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                         @Override
                         public void onLocationChanged(Location location) {
                             LatLng position = new LatLng(location.getLatitude(), location.getLongitude());
-                            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(9).build();
+                            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(10).build();
                             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                         }
 
@@ -295,7 +295,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
                 }
             }
 
-            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(9).build();
+            CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(10).build();
             mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         }
 
@@ -310,6 +310,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         intent.putExtra(MapDetailActivity.DETAIL_SUBJECT, markerTitle(locationType));
         intent.putExtra(MapDetailActivity.DETAIL_NAME, marker.getTitle());
         intent.putExtra(MapDetailActivity.DETAIL_ADDRESS, marker.getSnippet());
+        intent.putExtra(MapDetailActivity.DETAIL_PHONE, location.phone);
         intent.putExtra(MapDetailActivity.DETAIL_LAT, marker.getPosition().latitude);
         intent.putExtra(MapDetailActivity.DETAIL_LNG, marker.getPosition().longitude);
         intent.putExtra(MapDetailActivity.DETAIL_EXTRAS, location.description);
