@@ -8,4 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="OverlayTextStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:shadowColor">#222</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+
 </resources>
