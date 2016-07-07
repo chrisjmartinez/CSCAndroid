@@ -34,6 +34,9 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -76,9 +79,14 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         ArrayList<SafetyLocation> locations = null;
         String jsonFile = "locations.json";
         String xmlFile = "locations.xml";
+        String url = "http://www.safemap.org/" + jsonFile;
 
         if (locationsFromJSON) {
-            JSONObject json = loadJSONFromAsset(jsonFile);
+            JSONObject json = loadJSONFromURL(url);
+
+            if (json == null) {
+                json = loadJSONFromAsset(jsonFile);
+            }
 
             if (json != null) {
                 locations = SafetyLocation.locationsFromJSON(json);
@@ -324,17 +332,18 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         try {
             InputStream is = getAssets().open(jsonFile);
 
-            int size = is.available();
+            if (is != null) {
+                int size = is.available();
 
-            byte[] buffer = new byte[size];
+                byte[] buffer = new byte[size];
 
-            is.read(buffer);
+                is.read(buffer);
 
-            is.close();
+                is.close();
 
-            jsonString = new String(buffer, "UTF-8");
-            json = new JSONObject(jsonString);
-
+                jsonString = new String(buffer, "UTF-8");
+                json = new JSONObject(jsonString);
+            }
         } catch (IOException ex) {
             ex.printStackTrace();
         } catch (JSONException e) {
@@ -342,6 +351,48 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         }
 
         return json;
+    }
+
+    protected JSONObject loadJSONFromURL(String url) {
+        String jsonString = null;
+        JSONObject json = null;
+        try {
+            InputStream is = getConnection(url);
+
+            if (is != null) {
+                int size = is.available();
+
+                byte[] buffer = new byte[size];
+
+                is.read(buffer);
+
+                is.close();
+
+                jsonString = new String(buffer, "UTF-8");
+                json = new JSONObject(jsonString);
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return json;
+    }
+
+    private InputStream getConnection(String url) {
+        InputStream is = null;
+        try {
+            URLConnection conn = new URL(url).openConnection();
+            is = conn.getInputStream();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return is;
     }
 
     protected ArrayList<SafetyLocation> loadXMLFromAsset(String xmlFile) {
