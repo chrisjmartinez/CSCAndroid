@@ -75,7 +75,7 @@
     },
     {
       "name":"YMCA of South Palm Beach County",
-      "address":"9600 Military Trail, Boynton Beach, FL 33436",
+      "address":"9600 S. Military Trail, Boynton Beach, FL 33436",
       "phone":"561-738-9622",
       "latitude":"26.533366",
       "longitude":"-80.122074",
@@ -84,7 +84,7 @@
     },
     {
       "name":"Mandel JCC of the Palm Beaches",
-      "address":"8500 Jog Road, Boynton Beach, FL 33437",
+      "address":"8500 Jog Road, Boynton Beach, FL 33472-2972",
       "phone":"561-487-8276",
       "latitude":"26.550110",
       "longitude":"-80.148613",
@@ -255,7 +255,7 @@
     },
     {
       "name": "Boynton Beach Fire Rescue",
-      "address": "3501 N. Congress Ave., Boynton Beach, FL 33436",
+      "address": "3501 Congress Ave, Boynton Beach, FL 33436",
       "phone": "561-742-6343",
       "latitude": "26.484174",
       "longitude": "-80.089778",
@@ -273,7 +273,7 @@
     },
     {
       "name": "Greenacres Public Safety",
-      "address": "2995 Jog Rd., Greenacres, FL 33467",
+      "address": "2995 Jog Rd, Greenacres, FL 33467-2003",
       "phone": "561-642-2133",
       "latitude": "26.633298",
       "longitude": "-80.146656",
@@ -381,7 +381,7 @@
     },
     {
       "name": "Safe Kids Palm Beach County",
-      "address": "2001 W. Blue Heron Blvd., Riviera Beach, FL 33404",
+      "address": "2001 W Blue Heron Blvd, West Palm Beach, FL 33404-5003",
       "phone": "561-727-1047",
       "latitude": "26.782095",
       "longitude": "-80.087966",
@@ -498,7 +498,7 @@
     },
     {
       "name": "Greenacres Police Department",
-      "address": "2995 S. Jog Rd., Greenacres, FL 33467",
+      "address": "2995 Jog Rd, Greenacres, FL 33467-2003",
       "phone": "561-642-2160",
       "latitude": "26.633221",
       "longitude": "-80.146635",
