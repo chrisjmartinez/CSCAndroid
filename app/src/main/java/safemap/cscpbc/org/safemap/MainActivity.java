@@ -8,14 +8,23 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
 public class MainActivity extends AppCompatActivity {
 
     public static String LOCATION_TYPE = "LOCATION_TYPE";
+    public static String LOCATIONS_FILE = "locations.json";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getUsersCurrentLocation();
+        downloadLocations();
     }
 
     public void swimButtonClick(View v) {
@@ -131,4 +141,58 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    public void downloadLocations() {
+        String urlJSON = "http://pbcreads.org/" + LOCATIONS_FILE;
+        DownloadLocationsTask kmlDownloader = new DownloadLocationsTask();
+
+        kmlDownloader.execute(new String[]{ urlJSON } );
+    }
+
+    private class DownloadLocationsTask extends AsyncTask<String, Void, Void> {
+
+        @Override
+        protected Void doInBackground(String... params) {
+            InputStream is = getConnection(params[0]);
+            FileOutputStream outputStream;
+
+            if (is != null) {
+                try {
+                    outputStream = getApplicationContext().openFileOutput(LOCATIONS_FILE, Context.MODE_PRIVATE);
+                    byte[] buffer = new byte[1024];
+                    int bytesRead;
+                    while ((bytesRead = is.read(buffer)) != -1) {
+                        outputStream.write(buffer, 0, bytesRead);
+                    }
+                    outputStream.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            return (Void)null;
+        }
+
+        protected void onProgressUpdate(Void... progress) {
+        }
+
+        protected void onPostExecute(Void result) {
+        }
+    }
+
+    private InputStream getConnection(String url) {
+        InputStream is = null;
+        try {
+            URLConnection conn = new URL(url).openConnection();
+            is = conn.getInputStream();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return is;
+    }
+
 }

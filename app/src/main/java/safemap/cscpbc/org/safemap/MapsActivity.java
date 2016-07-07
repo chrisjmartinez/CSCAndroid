@@ -1,11 +1,9 @@
 package safemap.cscpbc.org.safemap;
 
-import android.*;
 import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Criteria;
 import android.location.Geocoder;
@@ -13,9 +11,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -32,11 +28,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParserException;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -77,15 +71,13 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
 
     protected ArrayList<SafetyLocation> loadLocations() {
         ArrayList<SafetyLocation> locations = null;
-        String jsonFile = "locations.json";
         String xmlFile = "locations.xml";
-        String url = "http://www.safemap.org/" + jsonFile;
 
         if (locationsFromJSON) {
-            JSONObject json = loadJSONFromURL(url);
+            JSONObject json = loadJSONFromCache();
 
             if (json == null) {
-                json = loadJSONFromAsset(jsonFile);
+                json = loadJSONFromAsset(MainActivity.LOCATIONS_FILE);
             }
 
             if (json != null) {
@@ -96,6 +88,18 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         }
 
         return locations;
+    }
+
+    public InputStream locationsFromCache() {
+        FileInputStream inputStream = null;
+
+        try {
+            inputStream = getApplicationContext().openFileInput(MainActivity.LOCATIONS_FILE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return inputStream;
     }
 
     protected ArrayList<SafetyLocation> loadLocations(SafetyLocation.LocationType locationType) {
@@ -353,11 +357,11 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         return json;
     }
 
-    protected JSONObject loadJSONFromURL(String url) {
+    protected JSONObject loadJSONFromCache() {
         String jsonString = null;
         JSONObject json = null;
         try {
-            InputStream is = getConnection(url);
+            InputStream is = locationsFromCache();
 
             if (is != null) {
                 int size = is.available();
@@ -378,21 +382,6 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnInfoW
         }
 
         return json;
-    }
-
-    private InputStream getConnection(String url) {
-        InputStream is = null;
-        try {
-            URLConnection conn = new URL(url).openConnection();
-            is = conn.getInputStream();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return is;
     }
 
     protected ArrayList<SafetyLocation> loadXMLFromAsset(String xmlFile) {
