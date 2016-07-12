@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.util.Linkify;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +52,7 @@ public class MapDetailActivity extends AppCompatActivity {
             textName.setText(name);
             textAddress.setText(address);
             textPhone.setText(phone);
+            Linkify.addLinks(textPhone, Linkify.PHONE_NUMBERS);
             textExtras.setText(extra);
 
             lat = extras.getDouble(DETAIL_LAT);

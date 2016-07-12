@@ -265,7 +265,7 @@
     {
       "name": "AutoNation Chevrolet of Greenacres",
       "address": "5757 Lake Worth Rd., Greenacres, FL 33463",
-      "phone": "561-841-3500, ext. 4012",
+      "phone": "561-841-3500,4012",
       "latitude": "26.620319",
       "longitude": "-80.132041",
       "description": "Fittings are done the third Thursday of the month from 2:30 - 5:30 p.m. Please call AutoNation to schedule an appointment.",
@@ -373,7 +373,7 @@
     {
       "name": "Safety Council of Palm Beach County",
       "address": "4152 W. Blue Heron Blvd., Suite 110, Riviera Beach, FL 33404",
-      "phone": "561-845-8233 ext. 11",
+      "phone": "561-845-8233,11",
       "latitude": "26.785010",
       "longitude": "-80.101991",
       "description": "Please call to schedule an appointment.",
